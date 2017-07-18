@@ -42,7 +42,7 @@ def getQue():
 
         try:
             # wolframalpha
-            app_id = "KHUJLG-YUVT8K9V33"
+            app_id = " " #Sorry can't give the app id openly...mail me at prorohan8@gmail.com for the app_id #Sorry
             client = wolframalpha.Client(app_id)
             res = client.query(question)
             answer1 = next(res.results).text
