@@ -1,7 +1,7 @@
 from Tkinter import *
 
 import wikipedia
-import wolframalpha
+
 
 import tkinter as tk,tkFont
 root=Tk()
@@ -40,19 +40,13 @@ def getQue():
         l.pack()
 
 
-        try:
-            # wolframalpha
-            app_id = " " #Sorry can't give the app id openly...mail me at prorohan8@gmail.com for the app_id #Sorry
-            client = wolframalpha.Client(app_id)
-            res = client.query(question)
-            answer1 = next(res.results).text
-            ans.set(answer1)
+       
 
 
-        except:
-            # wikipedia
-            answer1 =wikipedia.summary(question)
-            ans.set(answer1)
+        
+        # wikipedia api
+        answer1 =wikipedia.summary(question)
+        ans.set(answer1)
 
 getButton=Button(topframe,text="Get Answer!",command=getQue,width=20,height=2,relief=RAISED,bg='#65fc5f',font=customFont3)
 getButton.place(relx=0.5, rely=1.0, anchor='s')
