@@ -55,4 +55,4 @@ lr=Label(root,text="- Developed By Rohan",bg='#F50A44',fg='#d8ff4f',font=customF
 lr.place(relx=1.0, rely=1.0, anchor='se')
 root.mainloop()
 
-root.mainloop()
+
