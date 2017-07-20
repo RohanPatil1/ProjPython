@@ -1,6 +1,6 @@
 
 #(Jul 2017)GUI BUILD IN PYTHON BY Rohan Patil
-#
+#To Preview The Application, Go To :https://youtu.be/EIM51NNWO2E
 #----------------------------------------------Python_Imports-------------------------------------------------------------------#
 
 import smtplib
@@ -18,12 +18,6 @@ def mainProccess():
     mail.login(eEntry.get(), le.get())
     mail.sendmail(eEntry.get(), rme.get(), yme.get())
     mail.close()
-
-
-
-
-
-
 # ------------------------------------------------Roots_&_Frames----------------------------------------------------------------#
 
 root=Tk()
@@ -50,8 +44,6 @@ welcomeLabel.pack(side=TOP)
 
 getButton=Button(root,text="Send Mail !",width=20,height=4,command=mainProccess,relief=RAISED,bg='#65fc5f',font=customFontB,fg='#1a164f')
 getButton.place(relx=0.45, rely=0.4, anchor='s')
-
-
 
 elabel=Label(root,text="Enter Your Mail :   ",bg='#00f4bb',fg='white',font=customFont1)
 elabel.pack(side=LEFT)
