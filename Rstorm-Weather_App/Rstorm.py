@@ -1,17 +1,21 @@
+#(Jul 2017)GUI BUILD IN PYTHON BY Rohan Patil
+#To Preview The Application, Go To :https://youtu.be/QXRNJpqMO2A
+#---------------------------------------------------Tkinter--------------------------------------------------------------#
+
 from Tkinter import *
 import requests
 import tkinter as tk,tkFont
 from tkinter import Text, Tk
 
 
-
+#-------------------------------------------------Root_config-------------------------------------------------------------#
 
 root=Tk()
 root.configure(background='#13366d')
 root.geometry('425x425')
 root.title('Rstorm - Weather App')
 
-
+#-------------------------------------------------Fonts--------------------------------------------------------------------#
 customFont = tkFont.Font(family="Product Sans", size=23)
 customFontRe = tkFont.Font(family="Product Sans", size=23)
 customFont1 = tkFont.Font(family="Product Sans", size=9)
@@ -38,14 +42,13 @@ citynameE.place(relx=0.87, rely=0.44, anchor='se')
 
 
 
-
+#----------------------------------------------Main_Process_on_Button_Press---------------------------------------------------#
 def getWeather():
     url = "http://api.openweathermap.org/data/2.5/weather?q=" + citynameE.get() + "&appid=57147502247fabc972b29ef5ce0c8a7a"
 
     data = requests.get(url)
     read = data.json()
-
-#------------------------------STRINGVAR_CONFI------------------------------------------------------------------------#
+#-----------------------------------------------STRINGVAR_CONFIGS------------------------------------------------------------#
 
     country=(format(read['sys']['country']))
     cityname=StringVar()
@@ -96,26 +99,22 @@ def getWeather():
     LabelTemp = Label(top, text="Temp : ", bg="#13366d", fg="#E4FEFF", font=customFonttopL)
     LabelTemp.place(relx=0.38, rely=0.8, anchor='se')
 
-
-
-
-
-
-
-
     wdescripL = Label(top, textvariable=wdescrip, bg="#13366d", fg="white",font=customFont4)
     wdescripL.place(relx=0.73, rely=0.398, anchor='se')
 
     humidityL = Label(top,  textvariable=humidity, bg="#13366d", fg="white")
     humidityL.place(relx=0.60, rely=0.47, anchor='se')
+    
     pressureL = Label(top,textvariable=pressure, bg="#13366d", fg="white")
     pressureL.place(relx=0.62, rely=0.54, anchor='se')
 
 
     windSpeedL = Label(top,textvariable=windSpeed, bg="#13366d", fg="white")
+    
     windSpeedL.place(relx=0.62, rely=0.62, anchor='se')
     cloudsL = Label(top, textvariable=clouds, bg="#13366d",fg="white")
     cloudsL.place(relx=0.59, rely=0.70, anchor='se')
+    
     TempL = Label(top, textvariable=temperature, bg="#13366d", fg="white")
     TempL.place(relx=0.60, rely=0.79, anchor='se')
 
@@ -123,7 +122,7 @@ def getWeather():
 
 
 
-
+#-------------------------------------------------Root_config---------------------------------------------------------------#
 b = Button(root, text="Get Weather !", command=getWeather,font=customFontR,bg="#ce1a1a",width=33,height=3,fg="white")
 b.place(relx=0.83, rely=0.68, anchor='se')
 
@@ -131,3 +130,5 @@ deveL=Label(root,text="-Developed By Rohan",bg="#13366d",fg="white",font=customF
 deveL.place(relx=0.99, rely=0.99, anchor='se')
 
 root.mainloop()
+
+#-------------------------------------------Email:prorohan8@gmail.com------------------------------------------------------#
