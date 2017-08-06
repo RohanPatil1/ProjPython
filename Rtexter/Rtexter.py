@@ -1,3 +1,5 @@
+#(Aug 2017)GUI BUILD IN PYTHON BY Rohan Patil
+#------------------------------------------------IMPORTS--------------------------------------------------------------------#
 import Tkinter
 from Tkinter import *
 from ScrolledText import *
@@ -6,16 +8,15 @@ import tkMessageBox
 
 
 
-
+#-------------------------------------------------root_&_ScrollTextPad---------------------------------------------------------#
 root=Tk()
 root.title("Rtexter")
 root.geometry('793x473')
 root.configure(background='#00f4bb')
-
 textPad = ScrolledText(root, width=40, height=50,font=('Raleway',18))               
 
-# create a menu & define functions for each menu item
 
+#------------------------------------------------Functions_For_Menu------------------------------------------------------------#
 def open_command():
         file = tkFileDialog.askopenfile(parent=root,mode='rb',title='Select a file')
         if file != None:
@@ -26,7 +27,8 @@ def open_command():
 def save_command():
     file = tkFileDialog.asksaveasfile(mode='w')
     if file != None:
-    # slice off the last character from get, as an extra return is added
+        
+        # To get Rid Of The Extra Last Character From Get, We Slice It Off
         data = textPad.get('1.0', END+'-1c')  
         file.write(data)
         file.close()
@@ -38,9 +40,9 @@ def exit_command():
 def about_command():
     label = tkMessageBox.showinfo("About", "Rtexter \nDeveloped By Rohan")
         
-
+#------------------------------------------------Creating_Menu----------------------------------------------------------------#       
 def dummy():
-   
+    print "I am a Dummy Command, I will be removed in the next step"
 menu = Menu(root)
 root.config(menu=menu)
 filemenu = Menu(menu)
@@ -55,7 +57,10 @@ menu.add_cascade(label="Help", menu=helpmenu)
 helpmenu.add_command(label="About...", command=about_command)
 
 
+
+
+#-----------------------------------------------------Packing----------------------------------------------------------------#       
 textPad.pack()
 root.bind('<Escape>',save_command )
-
 root.mainloop()
+#-------------------------------------------Email:prorohan8@gmail.com------------------------------------------------------#
