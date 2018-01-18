@@ -1,4 +1,4 @@
-#(Jul 2017)GUI BUILD IN PYTHON BY Rohan Patil
+#(Jul 2017)
 #To Preview The Application, Go To :https://youtu.be/QXRNJpqMO2A
 #---------------------------------------------------Tkinter--------------------------------------------------------------#
 
