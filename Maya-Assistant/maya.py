@@ -1,10 +1,5 @@
 
 
-
-
-
-
-#http://shivammitra.com/cricbuzz-api-for-python/
 import wx
 import os
 import subprocess
@@ -290,7 +285,7 @@ class MyFrame(wx.Frame):
             region = str(data['region'])
             print 'Your region is ,'+region+' ,' + country
             print 'and your current location is ' +city 
-            tellIt('Your region is  ,'+ region +', India')
+            tellIt('Your region is  ,'+ region +', country)
             tellIt('and your current location is ' +city )
         elif ('tell my detail location') in put:
             url = 'http://ipinfo.io/json'
@@ -308,9 +303,7 @@ class MyFrame(wx.Frame):
 
         elif ('send a mail') in put :
             
-            # (Jul 2017)GUI BUILD IN PYTHON BY Rohan Patil
-            # To Preview The Application, Go To :https://youtu.be/EIM51NNWO2E
-            # ----------------------------------------------Python_Imports-------------------------------------------------------------------#
+           
             tellIt("Initiating R  mailer the email application")
             import smtplib
             import Tkinter as tk, tkFont
@@ -386,12 +379,10 @@ class MyFrame(wx.Frame):
 
             root.mainloop()
 
-            # --------------------------------------------------Email:prorohan8@gmail.com--------------------------------------------------#
+            
 
         elif ('get weather details') in put:
-            # (Jul 2017)GUI BUILD IN PYTHON BY Rohan Patil
-            # To Preview The Application, Go To :https://youtu.be/QXRNJpqMO2A
-            # ---------------------------------------------------Tkinter--------------------------------------------------------------#
+           
 
             tellIt("Initiating Rstorn the weather app ")
             import requests
@@ -511,12 +502,10 @@ class MyFrame(wx.Frame):
 
             root.mainloop()
 
-            # -------------------------------------------Email:prorohan8@gmail.com------------------------------------------------------#
+         
 
         elif ('get call details') in put :
-    # (Jul 2017)GUI Build With Python Tkinter By Rohan Patil
-    # To Preview How It Works, Visit : https://www.youtube.com/watch?v=wA6plE3ukfk
-    # ---------------------------------------------IMPORTS-----------------------------------------------------------------------#
+   
             import Tkinter as tk, tkFont
             from Tkinter import Text, Tk
             import trunofficial
@@ -638,9 +627,7 @@ class MyFrame(wx.Frame):
 
             root.mainloop()
 
-    # ----------------------------------EMAIL: prorohan8@gmail.com-------------------------------------------------------------------#
-
-
+  
 
 
 
