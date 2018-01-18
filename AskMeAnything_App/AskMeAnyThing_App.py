@@ -1,4 +1,4 @@
-#(Jul 2017)GUI Build With Python Tkinter By Rohan Patil
+#(Jul 2017)
 #To Preview How It Works, Visit : https://youtu.be/dxkTBIHj90g
 #----------------------------------------Python_Imports-----------------------------------------------------------------------#
 
