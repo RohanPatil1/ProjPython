@@ -1,4 +1,4 @@
-#(Aug 2017)GUI BUILD IN PYTHON BY Rohan Patil
+#(Aug 2017)
 #------------------------------------------------IMPORTS--------------------------------------------------------------------#
 import Tkinter
 from Tkinter import *
